@@ -17,6 +17,16 @@
         "styles/editor-style.scss"
       ]
     },
+    "login-style.css": {
+      "files": [
+        "styles/login-style.scss"
+      ]
+    },
+    "admin-style.css": {
+      "files": [
+        "styles/admin-style.scss"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     },
@@ -25,6 +35,6 @@
     }
   },
   "config": {
-    "devUrl": "http://brancamenta.dev"
+    "devUrl": "http://branca.dev"
   }
 }
