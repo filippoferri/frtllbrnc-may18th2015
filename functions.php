@@ -19,6 +19,7 @@ $sage_includes = [
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
   'lib/admin.php',                 // Custom Admin
+  'lib/plugins.php',               // Add Plugins
 ];
 
 foreach ($sage_includes as $file) {
@@ -29,3 +30,9 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+function custom_function_name(){
+	include 'lib/cards/test.php';
+}
+add_action( 'pt_element_extend', 'custom_function_name' );

@@ -64,3 +64,28 @@ function widgets_init() {
   ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
+
+/**
+ * Type kit
+ */
+function typekit_font() { ?>
+<script>
+  WebFontConfig = {
+    //typekit: { id: '' },
+    google: {
+      families: ['Noto Sans']
+    }
+  };
+
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+<?php }
+add_action('wp_head', __NAMESPACE__ . '\\typekit_font', 20);

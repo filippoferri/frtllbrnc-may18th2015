@@ -65,7 +65,7 @@ function my_login_logo_url() {
 }
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
-    //Add Login Tutle
+    //Add Login Title
     function my_login_logo_url_title() {
         return 'Branca';
     }
@@ -85,8 +85,6 @@ function annointed_admin_bar_remove() {
    /* Remove their stuff */
    $wp_admin_bar->remove_menu('wp-logo');
 }
-
-
 
 //Remove Menu
 function remove_menus(){
